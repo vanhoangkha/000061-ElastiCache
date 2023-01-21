@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Set and Get a hash with multiple items :: Amazon ElastiCache for Redis</title>
 
     
-    <link href="/css/nucleus.css?1650525731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650525731" rel="stylesheet">
-    <link href="/css/hybrid.css?1650525731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650525731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650525731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650525731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650525731" rel="stylesheet">
-    <link href="/css/theme.css?1650525731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650525731" rel="stylesheet">
+    <link href="/css/nucleus.css?1674290879" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674290879" rel="stylesheet">
+    <link href="/css/hybrid.css?1674290879" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674290879" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674290879" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674290879" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674290879" rel="stylesheet">
+    <link href="/css/theme.css?1674290879" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674290879" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1650525731" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674290879" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650525731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674290879"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650525731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650525731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674290879"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674290879"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650525731"></script>
+<script type="text/javascript" src="/js/search.js?1674290879"></script>
 
     
   </div>
@@ -1016,7 +1016,7 @@
   
     
     <li data-nav-id="/vi/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/" title="Set and Get a hash with multiple items" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -1211,7 +1211,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-04-2022</font></i>
+        <i><font color=orange>21-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1305,15 +1305,15 @@
 <li>Tạo một file python có tên SetAndGetHash.py</li>
 <li>Sao chép chương trình sau và dán vào file có tên SetAndGetHash.py.</li>
 </ol>
-<pre><code>import logging
+<pre tabindex="0"><code>import logging
 import time
 
-logging.basicConfig(level=logging.INFO,format='%(asctime)s: %(message)s')
+logging.basicConfig(level=logging.INFO,format=&#39;%(asctime)s: %(message)s&#39;)
 
-keyName='mykey'
-keyValues={'datetime': time.ctime(time.time()), 'epochtime': time.time()}
+keyName=&#39;mykey&#39;
+keyValues={&#39;datetime&#39;: time.ctime(time.time()), &#39;epochtime&#39;: time.time()}
 
-# Set the hash 'mykey' with the current date and time in human readable format (datetime field) and epoch number (epochtime field). 
+# Set the hash &#39;mykey&#39; with the current date and time in human readable format (datetime field) and epoch number (epochtime field). 
 redis.hset(keyName, mapping=keyValues)
 
 # Set the key to expire and removed from cache in 60 seconds.
@@ -1326,16 +1326,13 @@ time.sleep(5)
 keyValues=redis.hgetall(keyName)
 keyTTL=redis.ttl(keyName)
 
-logging.info(&quot;Key {} was set at {} and has {} seconds until expired&quot;.format(keyName, keyValues, keyTTL))
-
+logging.info(&#34;Key {} was set at {} and has {} seconds until expired&#34;.format(keyName, keyValues, keyTTL))
 </code></pre><ol start="3">
 <li>Để chạy chương trình, hãy nhập lệnh sau:</li>
 </ol>
-<pre><code>python SetAndGetHash.py
-
+<pre tabindex="0"><code>python SetAndGetHash.py
 </code></pre><p>Trường hợp không chạy được chương trình, ta sử dụng lệnh sau:</p>
-<pre><code>python &quot;đường dẫn file SetAndGetHash.py&quot;
-
+<pre tabindex="0"><code>python &#34;đường dẫn file SetAndGetHash.py&#34;
 </code></pre>
 
 
@@ -1966,19 +1963,19 @@ logging.info(&quot;Key {} was set at {} and has {} seconds until expired&quot;.f
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650525731"></script>
-    <script src="/js/jquery.sticky.js?1650525731"></script>
-    <script src="/js/featherlight.min.js?1650525731"></script>
-    <script src="/js/highlight.pack.js?1650525731"></script>
+    <script src="/js/clipboard.min.js?1674290879"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674290879"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674290879"></script>
+    <script src="/js/jquery.sticky.js?1674290879"></script>
+    <script src="/js/featherlight.min.js?1674290879"></script>
+    <script src="/js/highlight.pack.js?1674290879"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650525731"></script>
-    <script src="/js/learn.js?1650525731"></script>
-    <script src="/js/hugo-learn.js?1650525731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674290879"></script>
+    <script src="/js/learn.js?1674290879"></script>
+    <script src="/js/hugo-learn.js?1674290879"></script>
 
-    <link href="/mermaid/mermaid.css?1650525731" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650525731"></script>
+    <link href="/mermaid/mermaid.css?1674290879" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674290879"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

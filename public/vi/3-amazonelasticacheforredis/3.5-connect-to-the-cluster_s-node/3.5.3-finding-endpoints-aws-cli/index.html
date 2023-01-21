@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Endpoints use AWS CLI :: Amazon ElastiCache for Redis</title>
 
     
-    <link href="/css/nucleus.css?1650525731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650525731" rel="stylesheet">
-    <link href="/css/hybrid.css?1650525731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650525731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650525731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650525731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650525731" rel="stylesheet">
-    <link href="/css/theme.css?1650525731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650525731" rel="stylesheet">
+    <link href="/css/nucleus.css?1674290878" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674290878" rel="stylesheet">
+    <link href="/css/hybrid.css?1674290878" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674290878" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674290878" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674290878" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674290878" rel="stylesheet">
+    <link href="/css/theme.css?1674290878" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674290878" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1650525731" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674290878" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650525731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674290878"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650525731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650525731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674290878"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674290878"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650525731"></script>
+<script type="text/javascript" src="/js/search.js?1674290878"></script>
 
     
   </div>
@@ -597,7 +597,7 @@
   
     
     <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/" title="Endpoints use AWS CLI" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -1211,7 +1211,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-04-2022</font></i>
+        <i><font color=orange>21-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1327,141 +1327,136 @@
 <ul>
 <li>Đối với Linux, macOS hoặc Unix:</li>
 </ul>
-<pre><code>aws elasticache describe-cache-clusters \
+<pre tabindex="0"><code>aws elasticache describe-cache-clusters \
     --cache-cluster-id redis-cluster \
     --show-cache-node-info  
-
 </code></pre><ul>
 <li>Đối với Windows:</li>
 </ul>
-<pre><code>aws elasticache describe-cache-clusters ^
+<pre tabindex="0"><code>aws elasticache describe-cache-clusters ^
     --cache-cluster-id redis-cluster ^
     --show-cache-node-info  
-
 </code></pre><p>Đầu ra từ thao tác trên sẽ giống như thế này (định dạng JSON).</p>
-<pre><code>{
-    &quot;CacheClusters&quot;: [
+<pre tabindex="0"><code>{
+    &#34;CacheClusters&#34;: [
         {
-            &quot;CacheClusterStatus&quot;: &quot;available&quot;,
-            &quot;SecurityGroups&quot;: [
+            &#34;CacheClusterStatus&#34;: &#34;available&#34;,
+            &#34;SecurityGroups&#34;: [
                 {
-                    &quot;SecurityGroupId&quot;: &quot;sg-77186e0d&quot;,
-                    &quot;Status&quot;: &quot;active&quot;
+                    &#34;SecurityGroupId&#34;: &#34;sg-77186e0d&#34;,
+                    &#34;Status&#34;: &#34;active&#34;
                 }
             ],
-            &quot;CacheNodes&quot;: [
+            &#34;CacheNodes&#34;: [
                 {
-                    &quot;CustomerAvailabilityZone&quot;: &quot;us-east-1b&quot;,
-                    &quot;CacheNodeCreateTime&quot;: &quot;2018-04-25T18:19:28.241Z&quot;,
-                    &quot;CacheNodeStatus&quot;: &quot;available&quot;,
-                    &quot;CacheNodeId&quot;: &quot;0001&quot;,
-                    &quot;Endpoint&quot;: {
-                        &quot;Address&quot;: &quot;redis-cluster.ameaqx.0001.use1.cache.amazonaws.com&quot;,
-                        &quot;Port&quot;: 6379
+                    &#34;CustomerAvailabilityZone&#34;: &#34;us-east-1b&#34;,
+                    &#34;CacheNodeCreateTime&#34;: &#34;2018-04-25T18:19:28.241Z&#34;,
+                    &#34;CacheNodeStatus&#34;: &#34;available&#34;,
+                    &#34;CacheNodeId&#34;: &#34;0001&#34;,
+                    &#34;Endpoint&#34;: {
+                        &#34;Address&#34;: &#34;redis-cluster.ameaqx.0001.use1.cache.amazonaws.com&#34;,
+                        &#34;Port&#34;: 6379
                     },
-                    &quot;ParameterGroupStatus&quot;: &quot;in-sync&quot;
+                    &#34;ParameterGroupStatus&#34;: &#34;in-sync&#34;
                 }
             ],
-            &quot;AtRestEncryptionEnabled&quot;: false,
-            &quot;CacheClusterId&quot;: &quot;redis-cluster&quot;,
-            &quot;TransitEncryptionEnabled&quot;: false,
-            &quot;CacheParameterGroup&quot;: {
-                &quot;ParameterApplyStatus&quot;: &quot;in-sync&quot;,
-                &quot;CacheNodeIdsToReboot&quot;: [],
-                &quot;CacheParameterGroupName&quot;: &quot;default.redis3.2&quot;
+            &#34;AtRestEncryptionEnabled&#34;: false,
+            &#34;CacheClusterId&#34;: &#34;redis-cluster&#34;,
+            &#34;TransitEncryptionEnabled&#34;: false,
+            &#34;CacheParameterGroup&#34;: {
+                &#34;ParameterApplyStatus&#34;: &#34;in-sync&#34;,
+                &#34;CacheNodeIdsToReboot&#34;: [],
+                &#34;CacheParameterGroupName&#34;: &#34;default.redis3.2&#34;
             },
-            &quot;NumCacheNodes&quot;: 1,
-            &quot;PreferredAvailabilityZone&quot;: &quot;us-east-1b&quot;,
-            &quot;AutoMinorVersionUpgrade&quot;: true,
-            &quot;Engine&quot;: &quot;redis&quot;,
-            &quot;AuthTokenEnabled&quot;: false,
-            &quot;PendingModifiedValues&quot;: {},
-            &quot;PreferredMaintenanceWindow&quot;: &quot;tue:08:30-tue:09:30&quot;,
-            &quot;CacheSecurityGroups&quot;: [],
-            &quot;CacheSubnetGroupName&quot;: &quot;default&quot;,
-            &quot;CacheNodeType&quot;: &quot;cache.t2.small&quot;,
-             &quot;DataTiering&quot;: &quot;disabled&quot;
-            &quot;EngineVersion&quot;: &quot;3.2.10&quot;,
-            &quot;ClientDownloadLandingPage&quot;: &quot;https://console.aws.amazon.com/elasticache/home#client-download:&quot;,
-            &quot;CacheClusterCreateTime&quot;: &quot;2018-04-25T18:19:28.241Z&quot;
+            &#34;NumCacheNodes&#34;: 1,
+            &#34;PreferredAvailabilityZone&#34;: &#34;us-east-1b&#34;,
+            &#34;AutoMinorVersionUpgrade&#34;: true,
+            &#34;Engine&#34;: &#34;redis&#34;,
+            &#34;AuthTokenEnabled&#34;: false,
+            &#34;PendingModifiedValues&#34;: {},
+            &#34;PreferredMaintenanceWindow&#34;: &#34;tue:08:30-tue:09:30&#34;,
+            &#34;CacheSecurityGroups&#34;: [],
+            &#34;CacheSubnetGroupName&#34;: &#34;default&#34;,
+            &#34;CacheNodeType&#34;: &#34;cache.t2.small&#34;,
+             &#34;DataTiering&#34;: &#34;disabled&#34;
+            &#34;EngineVersion&#34;: &#34;3.2.10&#34;,
+            &#34;ClientDownloadLandingPage&#34;: &#34;https://console.aws.amazon.com/elasticache/home#client-download:&#34;,
+            &#34;CacheClusterCreateTime&#34;: &#34;2018-04-25T18:19:28.241Z&#34;
         }
     ]
 }
-
 </code></pre><h3 id="finding-the-endpoints-for-replication-groups-aws-cli">Finding the Endpoints for Replication Groups (AWS CLI)</h3>
 <p>Bạn có thể sử dụng AWS CLI để khám phá các endpoint cho một replication group và các cluster của nó bằng lệnh <strong>describe-replication-groups</strong>. Lệnh trả về primary endpoint của replication group và danh sách tất cả các cluster (node) trong replication group với endpoint của chúng, cùng với reader endpoint.</p>
 <p>Thao tác sau đây truy xuất primary endpoint và reader endpoint của replication group <code>myreplgroup</code>. Sử dụng primary endpoint cho tất cả các hoạt động ghi.</p>
-<pre><code>aws elasticache describe-replication-groups \
+<pre tabindex="0"><code>aws elasticache describe-replication-groups \
     --replication-group-id myreplgroup
-
 </code></pre><p><em>Đối với Windows</em>:</p>
-<pre><code>aws elasticache describe-replication-groups ^
+<pre tabindex="0"><code>aws elasticache describe-replication-groups ^
     --replication-group-id myreplgroup
 </code></pre><p>Đầu ra từ thao tác này sẽ trông giống như thế này (định dạng JSON).</p>
-<pre><code>{
-   &quot;ReplicationGroups&quot;: [
+<pre tabindex="0"><code>{
+   &#34;ReplicationGroups&#34;: [
      {
-       &quot;Status&quot;: &quot;available&quot;, 
-       &quot;Description&quot;: &quot;test&quot;, 
-       &quot;NodeGroups&quot;: [
+       &#34;Status&#34;: &#34;available&#34;, 
+       &#34;Description&#34;: &#34;test&#34;, 
+       &#34;NodeGroups&#34;: [
          {
-            &quot;Status&quot;: &quot;available&quot;, 
-               &quot;NodeGroupMembers&quot;: [
+            &#34;Status&#34;: &#34;available&#34;, 
+               &#34;NodeGroupMembers&#34;: [
                   {
-                     &quot;CurrentRole&quot;: &quot;primary&quot;, 
-                     &quot;PreferredAvailabilityZone&quot;: &quot;us-west-2a&quot;, 
-                     &quot;CacheNodeId&quot;: &quot;0001&quot;, 
-                     &quot;ReadEndpoint&quot;: {
-                        &quot;Port&quot;: 6379, 
-                        &quot;Address&quot;: &quot;myreplgroup-001.1abc4d.0001.usw2.cache.amazonaws.com&quot;
+                     &#34;CurrentRole&#34;: &#34;primary&#34;, 
+                     &#34;PreferredAvailabilityZone&#34;: &#34;us-west-2a&#34;, 
+                     &#34;CacheNodeId&#34;: &#34;0001&#34;, 
+                     &#34;ReadEndpoint&#34;: {
+                        &#34;Port&#34;: 6379, 
+                        &#34;Address&#34;: &#34;myreplgroup-001.1abc4d.0001.usw2.cache.amazonaws.com&#34;
                      }, 
-                     &quot;CacheClusterId&quot;: &quot;myreplgroup-001&quot;
+                     &#34;CacheClusterId&#34;: &#34;myreplgroup-001&#34;
                   }, 
                   {
-                     &quot;CurrentRole&quot;: &quot;replica&quot;, 
-                     &quot;PreferredAvailabilityZone&quot;: &quot;us-west-2b&quot;, 
-                     &quot;CacheNodeId&quot;: &quot;0001&quot;, 
-                     &quot;ReadEndpoint&quot;: {
-                        &quot;Port&quot;: 6379, 
-                        &quot;Address&quot;: &quot;myreplgroup-002.1abc4d.0001.usw2.cache.amazonaws.com&quot;
+                     &#34;CurrentRole&#34;: &#34;replica&#34;, 
+                     &#34;PreferredAvailabilityZone&#34;: &#34;us-west-2b&#34;, 
+                     &#34;CacheNodeId&#34;: &#34;0001&#34;, 
+                     &#34;ReadEndpoint&#34;: {
+                        &#34;Port&#34;: 6379, 
+                        &#34;Address&#34;: &#34;myreplgroup-002.1abc4d.0001.usw2.cache.amazonaws.com&#34;
                      }, 
-                     &quot;CacheClusterId&quot;: &quot;myreplgroup-002&quot;
+                     &#34;CacheClusterId&#34;: &#34;myreplgroup-002&#34;
                   }, 
                   {
-                     &quot;CurrentRole&quot;: &quot;replica&quot;, 
-                     &quot;PreferredAvailabilityZone&quot;: &quot;us-west-2c&quot;, 
-                     &quot;CacheNodeId&quot;: &quot;0001&quot;, 
-                     &quot;ReadEndpoint&quot;: {
-                        &quot;Port&quot;: 6379, 
-                        &quot;Address&quot;: &quot;myreplgroup-003.1abc4d.0001.usw2.cache.amazonaws.com&quot;
+                     &#34;CurrentRole&#34;: &#34;replica&#34;, 
+                     &#34;PreferredAvailabilityZone&#34;: &#34;us-west-2c&#34;, 
+                     &#34;CacheNodeId&#34;: &#34;0001&#34;, 
+                     &#34;ReadEndpoint&#34;: {
+                        &#34;Port&#34;: 6379, 
+                        &#34;Address&#34;: &#34;myreplgroup-003.1abc4d.0001.usw2.cache.amazonaws.com&#34;
                      }, 
-                     &quot;CacheClusterId&quot;: &quot;myreplgroup-003&quot;
+                     &#34;CacheClusterId&#34;: &#34;myreplgroup-003&#34;
                   }
                ], 
-               &quot;NodeGroupId&quot;: &quot;0001&quot;, 
-               &quot;PrimaryEndpoint&quot;: {
-                  &quot;Port&quot;: 6379, 
-                  &quot;Address&quot;: &quot;myreplgroup.1abc4d.ng.0001.usw2.cache.amazonaws.com&quot;
+               &#34;NodeGroupId&#34;: &#34;0001&#34;, 
+               &#34;PrimaryEndpoint&#34;: {
+                  &#34;Port&#34;: 6379, 
+                  &#34;Address&#34;: &#34;myreplgroup.1abc4d.ng.0001.usw2.cache.amazonaws.com&#34;
                },
-               &quot;ReaderEndpoint&quot;: {
-                  &quot;Port&quot;: 6379, 
-                  &quot;Address&quot;: &quot;myreplgroup-ro.1abc4d.ng.0001.usw2.cache.amazonaws.com&quot;
+               &#34;ReaderEndpoint&#34;: {
+                  &#34;Port&#34;: 6379, 
+                  &#34;Address&#34;: &#34;myreplgroup-ro.1abc4d.ng.0001.usw2.cache.amazonaws.com&#34;
                }
             }
          ], 
-         &quot;ReplicationGroupId&quot;: &quot;myreplgroup&quot;, 
-         &quot;AutomaticFailover&quot;: &quot;enabled&quot;, 
-         &quot;SnapshottingClusterId&quot;: &quot;myreplgroup-002&quot;, 
-         &quot;MemberClusters&quot;: [
-            &quot;myreplgroup-001&quot;, 
-            &quot;myreplgroup-002&quot;, 
-            &quot;myreplgroup-003&quot;
+         &#34;ReplicationGroupId&#34;: &#34;myreplgroup&#34;, 
+         &#34;AutomaticFailover&#34;: &#34;enabled&#34;, 
+         &#34;SnapshottingClusterId&#34;: &#34;myreplgroup-002&#34;, 
+         &#34;MemberClusters&#34;: [
+            &#34;myreplgroup-001&#34;, 
+            &#34;myreplgroup-002&#34;, 
+            &#34;myreplgroup-003&#34;
          ], 
-         &quot;PendingModifiedValues&quot;: {}
+         &#34;PendingModifiedValues&#34;: {}
       }
    ]
 }
-
 </code></pre>
 
 
@@ -2096,19 +2091,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650525731"></script>
-    <script src="/js/jquery.sticky.js?1650525731"></script>
-    <script src="/js/featherlight.min.js?1650525731"></script>
-    <script src="/js/highlight.pack.js?1650525731"></script>
+    <script src="/js/clipboard.min.js?1674290879"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674290879"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674290879"></script>
+    <script src="/js/jquery.sticky.js?1674290879"></script>
+    <script src="/js/featherlight.min.js?1674290879"></script>
+    <script src="/js/highlight.pack.js?1674290879"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650525731"></script>
-    <script src="/js/learn.js?1650525731"></script>
-    <script src="/js/hugo-learn.js?1650525731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674290879"></script>
+    <script src="/js/learn.js?1674290879"></script>
+    <script src="/js/hugo-learn.js?1674290879"></script>
 
-    <link href="/mermaid/mermaid.css?1650525731" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650525731"></script>
+    <link href="/mermaid/mermaid.css?1674290879" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674290879"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

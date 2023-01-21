@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create a cluster (mode disabled cluster) :: Amazon ElastiCache for Redis</title>
 
     
-    <link href="/css/nucleus.css?1650525731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650525731" rel="stylesheet">
-    <link href="/css/hybrid.css?1650525731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650525731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650525731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650525731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650525731" rel="stylesheet">
-    <link href="/css/theme.css?1650525731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650525731" rel="stylesheet">
+    <link href="/css/nucleus.css?1674290878" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674290878" rel="stylesheet">
+    <link href="/css/hybrid.css?1674290878" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674290878" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674290878" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674290878" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674290878" rel="stylesheet">
+    <link href="/css/theme.css?1674290878" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674290878" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1650525731" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674290878" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650525731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674290878"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650525731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650525731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674290878"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674290878"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650525731"></script>
+<script type="text/javascript" src="/js/search.js?1674290878"></script>
 
     
   </div>
@@ -799,7 +799,7 @@
   
     
     <li data-nav-id="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/" title="Create a cluster (mode disabled cluster)" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -1211,7 +1211,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-04-2022</font></i>
+        <i><font color=orange>21-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1321,14 +1321,14 @@
 <li>Create python file <strong>CreateClusterModeDisabledCluster.py</strong></li>
 <li>Copy the following program and paste it into the CreateClusterModeDisabledCluster.py file.</li>
 </ol>
-<pre><code>import boto3
+<pre tabindex="0"><code>import boto3
 import logging
 
 logging.basicConfig(level=logging.INFO)
-client = boto3.client('elasticache')
+client = boto3.client(&#39;elasticache&#39;)
 
-def create_cluster_mode_disabled(CacheNodeType='cache.t3.small',EngineVersion='6.0',NumCacheClusters=2,ReplicationGroupDescription='Sample cache cluster',ReplicationGroupId=None):
-    &quot;&quot;&quot;Creates an Elasticache Cluster with cluster mode disabled
+def create_cluster_mode_disabled(CacheNodeType=&#39;cache.t3.small&#39;,EngineVersion=&#39;6.0&#39;,NumCacheClusters=2,ReplicationGroupDescription=&#39;Sample cache cluster&#39;,ReplicationGroupId=None):
+    &#34;&#34;&#34;Creates an Elasticache Cluster with cluster mode disabled
 
     Returns a dictionary with the API response
 
@@ -1341,14 +1341,14 @@ def create_cluster_mode_disabled(CacheNodeType='cache.t3.small',EngineVersion='6
     :param ReplicationGroupId: Name for the cluster
     :return: dictionary with the API results
 
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     if not ReplicationGroupId:
-        return 'ReplicationGroupId parameter is required'
+        return &#39;ReplicationGroupId parameter is required&#39;
 
     response = client.create_replication_group(
         AutomaticFailoverEnabled=True,
         CacheNodeType=CacheNodeType,
-        Engine='redis',
+        Engine=&#39;redis&#39;,
         EngineVersion=EngineVersion,
         NumCacheClusters=NumCacheClusters,
         ReplicationGroupDescription=ReplicationGroupDescription,
@@ -1358,30 +1358,27 @@ def create_cluster_mode_disabled(CacheNodeType='cache.t3.small',EngineVersion='6
     return response
 
 
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
     
     # Creates an Elasticace Cluster mode disabled cluster, based on cache.m6g.large nodes, Redis 6, one primary and two replicas
     elasticacheResponse = create_cluster_mode_disabled(
-        #CacheNodeType='cache.m6g.large',
-        EngineVersion='6.0',
+        #CacheNodeType=&#39;cache.m6g.large&#39;,
+        EngineVersion=&#39;6.0&#39;,
         NumCacheClusters=3,
-        ReplicationGroupDescription='Redis cluster mode disabled with replicas',
-        ReplicationGroupId='redis202104053'
+        ReplicationGroupDescription=&#39;Redis cluster mode disabled with replicas&#39;,
+        ReplicationGroupId=&#39;redis202104053&#39;
         )
     
     logging.info(elasticacheResponse)
-
 </code></pre><p><em>Result as shown</em></p>
 <p><img src="/images/4-PythonandElastiCache/4.1-CreatingElasticacheclustersandusers/4.1.1-Createaclustermodedisabledcluster/0001-createclusterdisable.png" alt="Create a cluster mode disabled cluster"></p>
 <ol start="3">
 <li>To run the program, enter the following command on the Windows Command Prompt:</li>
 </ol>
-<pre><code>python CreateClusterModeDisabledCluster.py
-
+<pre tabindex="0"><code>python CreateClusterModeDisabledCluster.py
 </code></pre><p>If the program cannot run, use the following command:</p>
-<pre><code>
-python &quot;CreateClusterModeDisabledCluster.py file path&quot;
-
+<pre tabindex="0"><code>
+python &#34;CreateClusterModeDisabledCluster.py file path&#34;
 </code></pre><h3 id="create-a-cluster-cluster-mode-disable-with-tls-and-rbac">Create a cluster (cluster mode disable) with TLS and RBAC</h3>
 <ul>
 <li>To ensure security, you can use Transport Layer Security (TLS) and Role-Based Access Control (RBAC) when creating a cluster (cluster mode disable). Unlike Redis AUTH, where all authenticated clients have full replication group access if their tokens are authenticated, RBAC allows you to control cluster access through user groups. These user groups are designed as a way to organize access to replication groups.</li>
@@ -1390,14 +1387,14 @@ python &quot;CreateClusterModeDisabledCluster.py file path&quot;
 <li>Create a python file named ClusterModeDisabledWithRBAC.py</li>
 <li>Copy the following program and paste it into the file named ClusterModeDisabledWithRBAC.py.</li>
 </ol>
-<pre><code>import boto3
+<pre tabindex="0"><code>import boto3
 import logging
 
 logging.basicConfig(level=logging.INFO)
-client = boto3.client('elasticache')
+client = boto3.client(&#39;elasticache&#39;)
 
-def create_cluster_mode_disabled_rbac(CacheNodeType='cache.t3.small',EngineVersion='6.0',NumCacheClusters=2,ReplicationGroupDescription='Sample cache cluster',ReplicationGroupId=None, UserGroupIds=None, SecurityGroupIds=None,CacheSubnetName):
-    &quot;&quot;&quot;Creates an Elasticache Cluster with cluster mode disabled and RBAC
+def create_cluster_mode_disabled_rbac(CacheNodeType=&#39;cache.t3.small&#39;,EngineVersion=&#39;6.0&#39;,NumCacheClusters=2,ReplicationGroupDescription=&#39;Sample cache cluster&#39;,ReplicationGroupId=None, UserGroupIds=None, SecurityGroupIds=None,CacheSubnetName):
+    &#34;&#34;&#34;Creates an Elasticache Cluster with cluster mode disabled and RBAC
 
     Returns a dictionary with the API response
 
@@ -1413,62 +1410,60 @@ def create_cluster_mode_disabled_rbac(CacheNodeType='cache.t3.small',EngineVersi
     :param CacheSubnetGroupName: subnet group where the cluster will be placed. If not defined, default will be used.
     :return: dictionary with the API results
 
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     if not ReplicationGroupId:
-        return {'Error': 'ReplicationGroupId parameter is required'}
+        return {&#39;Error&#39;: &#39;ReplicationGroupId parameter is required&#39;}
     elif not isinstance(UserGroupIds,(list)):
-        return {'Error': 'UserGroupIds parameter is required and must be a list'}
+        return {&#39;Error&#39;: &#39;UserGroupIds parameter is required and must be a list&#39;}
 
-    params={'AutomaticFailoverEnabled': True,
-            'CacheNodeType': CacheNodeType,
-            'Engine': 'redis',
-            'EngineVersion': EngineVersion,
-            'NumCacheClusters': NumCacheClusters,
-            'ReplicationGroupDescription': ReplicationGroupDescription,
-            'ReplicationGroupId': ReplicationGroupId,
-            'SnapshotRetentionLimit': 30,
-            'TransitEncryptionEnabled': True,
-            'UserGroupIds':UserGroupIds
+    params={&#39;AutomaticFailoverEnabled&#39;: True,
+            &#39;CacheNodeType&#39;: CacheNodeType,
+            &#39;Engine&#39;: &#39;redis&#39;,
+            &#39;EngineVersion&#39;: EngineVersion,
+            &#39;NumCacheClusters&#39;: NumCacheClusters,
+            &#39;ReplicationGroupDescription&#39;: ReplicationGroupDescription,
+            &#39;ReplicationGroupId&#39;: ReplicationGroupId,
+            &#39;SnapshotRetentionLimit&#39;: 30,
+            &#39;TransitEncryptionEnabled&#39;: True,
+            &#39;UserGroupIds&#39;:UserGroupIds
         }
 
     # defaults will be used if CacheSubnetGroupName or SecurityGroups are not explicit.
     if isinstance(SecurityGroupIds,(list)):
-        params.update({'SecurityGroupIds':SecurityGroupIds})
+        params.update({&#39;SecurityGroupIds&#39;:SecurityGroupIds})
     if CacheSubnetGroupName:
-        params.update({'CacheSubnetGroupName':CacheSubnetGroupName})
+        params.update({&#39;CacheSubnetGroupName&#39;:CacheSubnetGroupName})
 
     response = client.create_replication_group(**params)
     return response
 
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
 
     # Creates an Elasticace Cluster mode disabled cluster, based on cache.m6g.large nodes, Redis 6, one primary and two replicas.
-    # Assigns the existent user group &quot;mygroup&quot; for RBAC authentication
+    # Assigns the existent user group &#34;mygroup&#34; for RBAC authentication
    
     response=create_cluster_mode_disabled_rbac(
-        CacheNodeType='cache.m6g.large',
-        EngineVersion='6.0',
+        CacheNodeType=&#39;cache.m6g.large&#39;,
+        EngineVersion=&#39;6.0&#39;,
         NumCacheClusters=3,
-        ReplicationGroupDescription='Redis cluster mode disabled with replicas',
-        ReplicationGroupId='redis202104',
+        ReplicationGroupDescription=&#39;Redis cluster mode disabled with replicas&#39;,
+        ReplicationGroupId=&#39;redis202104&#39;,
         UserGroupIds=[
-            'mygroup'
+            &#39;mygroup&#39;
         ],
         SecurityGroupIds=[
-            'sg-7cc73803'
+            &#39;sg-7cc73803&#39;
         ],
-        CacheSubnetGroupName='default'
+        CacheSubnetGroupName=&#39;default&#39;
     )
 
     logging.info(response)
-
 </code></pre><ol start="3">
 <li>To run the program, enter the following command:</li>
 </ol>
-<pre><code>python ClusterModeDisabledWithRBAC.py
+<pre tabindex="0"><code>python ClusterModeDisabledWithRBAC.py
 </code></pre><p>If the program cannot run, use the following command:</p>
-<pre><code>python &quot;file path ClusterModeDisabledWithRBAC.py&quot;
-
+<pre tabindex="0"><code>python &#34;file path ClusterModeDisabledWithRBAC.py&#34;
 </code></pre>
 
 
@@ -2097,19 +2092,19 @@ if __name__ == '__main__':
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650525731"></script>
-    <script src="/js/jquery.sticky.js?1650525731"></script>
-    <script src="/js/featherlight.min.js?1650525731"></script>
-    <script src="/js/highlight.pack.js?1650525731"></script>
+    <script src="/js/clipboard.min.js?1674290878"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674290878"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674290878"></script>
+    <script src="/js/jquery.sticky.js?1674290878"></script>
+    <script src="/js/featherlight.min.js?1674290878"></script>
+    <script src="/js/highlight.pack.js?1674290878"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650525731"></script>
-    <script src="/js/learn.js?1650525731"></script>
-    <script src="/js/hugo-learn.js?1650525731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674290878"></script>
+    <script src="/js/learn.js?1674290878"></script>
+    <script src="/js/hugo-learn.js?1674290878"></script>
 
-    <link href="/mermaid/mermaid.css?1650525731" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650525731"></script>
+    <link href="/mermaid/mermaid.css?1674290878" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674290878"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

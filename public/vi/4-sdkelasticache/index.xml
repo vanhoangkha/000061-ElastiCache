@@ -4,10 +4,6 @@
     <title>Sử dụng AWS SDK để ghi và đọc dữ liệu trên ElastiCache on Amazon ElastiCache for Redis</title>
     <link>/vi/4-sdkelasticache/</link>
     <description>Recent content in Sử dụng AWS SDK để ghi và đọc dữ liệu trên ElastiCache on Amazon ElastiCache for Redis</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="/vi/4-sdkelasticache/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-sdkelasticache/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

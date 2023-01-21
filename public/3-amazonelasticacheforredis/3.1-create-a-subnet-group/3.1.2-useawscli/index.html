@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Use AWS CLI :: Amazon ElastiCache for Redis</title>
 
     
-    <link href="/css/nucleus.css?1650525731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650525731" rel="stylesheet">
-    <link href="/css/hybrid.css?1650525731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650525731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650525731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650525731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650525731" rel="stylesheet">
-    <link href="/css/theme.css?1650525731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650525731" rel="stylesheet">
+    <link href="/css/nucleus.css?1674290878" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674290878" rel="stylesheet">
+    <link href="/css/hybrid.css?1674290878" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674290878" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674290878" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674290878" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674290878" rel="stylesheet">
+    <link href="/css/theme.css?1674290878" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674290878" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1650525731" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674290878" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650525731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674290878"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650525731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650525731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674290878"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674290878"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650525731"></script>
+<script type="text/javascript" src="/js/search.js?1674290878"></script>
 
     
   </div>
@@ -321,7 +321,7 @@
   
     
     <li data-nav-id="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/" title="Use AWS CLI" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -1211,7 +1211,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-04-2022</font></i>
+        <i><font color=orange>21-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1322,36 +1322,35 @@
 <ul>
 <li>For Linux, macOS, or Unix:</li>
 </ul>
-<pre><code>aws elasticache create-cache-subnet-group \
+<pre tabindex="0"><code>aws elasticache create-cache-subnet-group \
     --cache-subnet-group-name mysubnetgroup \
-    --cache-subnet-group-description &quot;Testing&quot; \
+    --cache-subnet-group-description &#34;Testing&#34; \
     --subnet-ids subnet-53df9c3a
 </code></pre><ul>
 <li>For Windows:</li>
 </ul>
-<pre><code>aws elasticache create-cache-subnet-group ^
+<pre tabindex="0"><code>aws elasticache create-cache-subnet-group ^
     --cache-subnet-group-name mysubnetgroup ^
-    --cache-subnet-group-description &quot;Testing&quot; ^
+    --cache-subnet-group-description &#34;Testing&#34; ^
     --subnet-ids subnet-53df9c3a
 </code></pre><ol start="2">
 <li>This command will produce output similar to the following:</li>
 </ol>
-<pre><code>{
-    &quot;CacheSubnetGroup&quot;: {
-        &quot;VpcId&quot;: &quot;vpc-37c3cd17&quot;,
-        &quot;CacheSubnetGroupDescription&quot;: &quot;Testing&quot;,
-        &quot;Subnets&quot;: [
+<pre tabindex="0"><code>{
+    &#34;CacheSubnetGroup&#34;: {
+        &#34;VpcId&#34;: &#34;vpc-37c3cd17&#34;,
+        &#34;CacheSubnetGroupDescription&#34;: &#34;Testing&#34;,
+        &#34;Subnets&#34;: [
             {
-                &quot;SubnetIdentifier&quot;: &quot;subnet-53df9c3a&quot;,
-                &quot;SubnetAvailabilityZone&quot;: {
-                    &quot;Name&quot;: &quot;us-west-2a&quot;
+                &#34;SubnetIdentifier&#34;: &#34;subnet-53df9c3a&#34;,
+                &#34;SubnetAvailabilityZone&#34;: {
+                    &#34;Name&#34;: &#34;us-west-2a&#34;
                 }
             }
         ],
-        &quot;CacheSubnetGroupName&quot;: &quot;mysubnetgroup&quot;
+        &#34;CacheSubnetGroupName&#34;: &#34;mysubnetgroup&#34;
     }
 }
-
 </code></pre>
 
 
@@ -1983,19 +1982,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650525731"></script>
-    <script src="/js/jquery.sticky.js?1650525731"></script>
-    <script src="/js/featherlight.min.js?1650525731"></script>
-    <script src="/js/highlight.pack.js?1650525731"></script>
+    <script src="/js/clipboard.min.js?1674290878"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674290878"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674290878"></script>
+    <script src="/js/jquery.sticky.js?1674290878"></script>
+    <script src="/js/featherlight.min.js?1674290878"></script>
+    <script src="/js/highlight.pack.js?1674290878"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650525731"></script>
-    <script src="/js/learn.js?1650525731"></script>
-    <script src="/js/hugo-learn.js?1650525731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674290878"></script>
+    <script src="/js/learn.js?1674290878"></script>
+    <script src="/js/hugo-learn.js?1674290878"></script>
 
-    <link href="/mermaid/mermaid.css?1650525731" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650525731"></script>
+    <link href="/mermaid/mermaid.css?1674290878" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674290878"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

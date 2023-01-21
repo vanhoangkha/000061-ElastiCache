@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/</loc>
     <xhtml:link
@@ -14,9 +13,7 @@
                 hreflang="en"
                 href="/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/</loc>
     <xhtml:link
                 rel="alternate"
@@ -28,9 +25,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.1-connecting-to-a-cluster-mode-disabled-cluster/</loc>
     <xhtml:link
                 rel="alternate"
@@ -42,9 +37,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.1-connecting-to-a-cluster-mode-disabled-cluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/</loc>
     <xhtml:link
                 rel="alternate"
@@ -56,9 +49,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/</loc>
     <xhtml:link
                 rel="alternate"
@@ -70,9 +61,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.1-create-a-subnet-group/</loc>
     <xhtml:link
                 rel="alternate"
@@ -84,9 +73,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2-prerequiste/2.1-create-accesskey/</loc>
     <xhtml:link
                 rel="alternate"
@@ -98,9 +85,7 @@
                 hreflang="en"
                 href="/2-prerequiste/2.1-create-accesskey/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -112,9 +97,7 @@
                 hreflang="en"
                 href="/1-introduce/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.1-useconsole/</loc>
     <xhtml:link
                 rel="alternate"
@@ -126,9 +109,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.1-useconsole/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.1-use-console/</loc>
     <xhtml:link
                 rel="alternate"
@@ -140,9 +121,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.1-use-console/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2-redis-cluster-mode-enabled-cluster-console/</loc>
     <xhtml:link
                 rel="alternate"
@@ -154,9 +133,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2-redis-cluster-mode-enabled-cluster-console/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.2-connecting-to-a-cluster-mode-enabled-cluster/</loc>
     <xhtml:link
                 rel="alternate"
@@ -168,9 +145,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.2-connecting-to-a-cluster-mode-enabled-cluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.2-connecting-to-elasticache/</loc>
     <xhtml:link
                 rel="alternate"
@@ -182,9 +157,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.2-connecting-to-elasticache/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.2-create-a-cluster-mode-enabled-cluster/</loc>
     <xhtml:link
                 rel="alternate"
@@ -196,9 +169,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.2-create-a-cluster-mode-enabled-cluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/</loc>
     <xhtml:link
                 rel="alternate"
@@ -210,9 +181,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2-prerequiste/2.2-install-aws-cli/</loc>
     <xhtml:link
                 rel="alternate"
@@ -224,9 +193,7 @@
                 hreflang="en"
                 href="/2-prerequiste/2.2-install-aws-cli/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
@@ -238,9 +205,7 @@
                 hreflang="en"
                 href="/2-prerequiste/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/</loc>
     <xhtml:link
                 rel="alternate"
@@ -252,9 +217,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.2-use-aws-cli/</loc>
     <xhtml:link
                 rel="alternate"
@@ -266,9 +229,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.2-use-aws-cli/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2-prerequiste/2.3-configure-aws-cli/</loc>
     <xhtml:link
                 rel="alternate"
@@ -280,9 +241,7 @@
                 hreflang="en"
                 href="/2-prerequiste/2.3-configure-aws-cli/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.3-create-a-clustercluster-mode-enabled/</loc>
     <xhtml:link
                 rel="alternate"
@@ -294,9 +253,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.3-create-a-clustercluster-mode-enabled/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/</loc>
     <xhtml:link
                 rel="alternate"
@@ -308,9 +265,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/</loc>
     <xhtml:link
                 rel="alternate"
@@ -322,9 +277,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.3-set-and-get-strings/</loc>
     <xhtml:link
                 rel="alternate"
@@ -336,9 +289,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.3-set-and-get-strings/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/</loc>
     <xhtml:link
                 rel="alternate"
@@ -350,9 +301,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.4-grantaccesstocluster/</loc>
     <xhtml:link
                 rel="alternate"
@@ -364,9 +313,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.4-grantaccesstocluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/</loc>
     <xhtml:link
                 rel="alternate"
@@ -378,9 +325,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/</loc>
     <xhtml:link
                 rel="alternate"
@@ -392,9 +337,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/5.cleanupresource/</loc>
     <xhtml:link
                 rel="alternate"
@@ -406,9 +349,7 @@
                 hreflang="en"
                 href="/5.cleanupresource/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/</loc>
     <xhtml:link
                 rel="alternate"
@@ -420,9 +361,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.5-publish-and-subscriber/</loc>
     <xhtml:link
                 rel="alternate"
@@ -434,9 +373,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.5-publish-and-subscriber/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-sdkelasticache/4.6-write-and-read-from-a-stream/</loc>
     <xhtml:link
                 rel="alternate"
@@ -448,9 +385,7 @@
                 hreflang="en"
                 href="/4-sdkelasticache/4.6-write-and-read-from-a-stream/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.1-use-console/</loc>
     <xhtml:link
                 rel="alternate"
@@ -462,9 +397,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.1-use-console/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.2-use-aws-cli/</loc>
     <xhtml:link
                 rel="alternate"
@@ -476,9 +409,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.2-use-aws-cli/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-amazonelasticacheforredis/3.6-deleting-a-cluster/</loc>
     <xhtml:link
                 rel="alternate"
@@ -490,9 +421,7 @@
                 hreflang="en"
                 href="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -504,9 +433,7 @@
                 hreflang="en"
                 href="/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -519,5 +446,4 @@
                 href="/tags/"
                 />
   </url>
-  
 </urlset>

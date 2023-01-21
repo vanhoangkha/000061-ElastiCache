@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Kiểm tra nhóm người dùng :: Amazon ElastiCache for Redis</title>
 
     
-    <link href="/css/nucleus.css?1650525731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650525731" rel="stylesheet">
-    <link href="/css/hybrid.css?1650525731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650525731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650525731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650525731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650525731" rel="stylesheet">
-    <link href="/css/theme.css?1650525731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650525731" rel="stylesheet">
+    <link href="/css/nucleus.css?1674290879" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674290879" rel="stylesheet">
+    <link href="/css/hybrid.css?1674290879" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674290879" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674290879" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674290879" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674290879" rel="stylesheet">
+    <link href="/css/theme.css?1674290879" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674290879" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1650525731" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674290879" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650525731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674290879"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650525731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650525731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674290879"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674290879"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650525731"></script>
+<script type="text/javascript" src="/js/search.js?1674290879"></script>
 
     
   </div>
@@ -855,7 +855,7 @@
   
     
     <li data-nav-id="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/" title="Kiểm tra nhóm người dùng" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -1211,7 +1211,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-04-2022</font></i>
+        <i><font color=orange>21-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1312,55 +1312,55 @@
 <li>Tạo một file python có tên UserAndUserGroups.py</li>
 <li>Sao chép chương trình sau và dán vào file có tên UserAndUserGroups.py.</li>
 </ol>
-<pre><code>import boto3
+<pre tabindex="0"><code>import boto3
 import logging
 
 logging.basicConfig(level=logging.INFO)
-client = boto3.client('elasticache')
+client = boto3.client(&#39;elasticache&#39;)
 
 def check_user_exists(UserId):
-    &quot;&quot;&quot;Checks if UserId exists
+    &#34;&#34;&#34;Checks if UserId exists
 
     Returns True if UserId exists, otherwise False
     :param UserId: Elasticache User ID
     :return: True|False
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     try:
         response = client.describe_users(
             UserId=UserId,
         )
-        if response['Users'][0]['UserId'].lower() == UserId.lower():
+        if response[&#39;Users&#39;][0][&#39;UserId&#39;].lower() == UserId.lower():
             return True
     except Exception as e:
-        if e.response['Error']['Code'] == 'UserNotFound':
-            logging.info(e.response['Error'])
+        if e.response[&#39;Error&#39;][&#39;Code&#39;] == &#39;UserNotFound&#39;:
+            logging.info(e.response[&#39;Error&#39;])
             return False
         else:
             raise
 
 def check_group_exists(UserGroupId):
-    &quot;&quot;&quot;Checks if UserGroupID exists
+    &#34;&#34;&#34;Checks if UserGroupID exists
 
     Returns True if Group ID exists, otherwise False
     :param UserGroupId: Elasticache User ID
     :return: True|False
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
 
     try:
         response = client.describe_user_groups(
             UserGroupId=UserGroupId
         )
-        if response['UserGroups'][0]['UserGroupId'].lower() == UserGroupId.lower():
+        if response[&#39;UserGroups&#39;][0][&#39;UserGroupId&#39;].lower() == UserGroupId.lower():
             return True
     except Exception as e:
-        if e.response['Error']['Code'] == 'UserGroupNotFound':
-            logging.info(e.response['Error'])
+        if e.response[&#39;Error&#39;][&#39;Code&#39;] == &#39;UserGroupNotFound&#39;:
+            logging.info(e.response[&#39;Error&#39;])
             return False
         else:
             raise
 
 def create_user(UserId=None,UserName=None,Password=None,AccessString=None):
-    &quot;&quot;&quot;Creates a new user
+    &#34;&#34;&#34;Creates a new user
 
     Returns the ARN for the newly created user or the error message
     :param UserId: Elasticache user ID. User IDs must be unique
@@ -1368,66 +1368,63 @@ def create_user(UserId=None,UserName=None,Password=None,AccessString=None):
     :param Password: Password for user. Must have at least 16 chars.
     :param AccessString: Access string with the permissions for the user. For details refer to https://docs..amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string
     :return: user ARN
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     try:
         response = client.create_user(
             UserId=UserId,
             UserName=UserName,
-            Engine='Redis',
+            Engine=&#39;Redis&#39;,
             Passwords=[Password],
             AccessString=AccessString,
             NoPasswordRequired=False
         )
-        return response['ARN']
+        return response[&#39;ARN&#39;]
     except Exception as e:
-        logging.info(e.response['Error'])
-        return e.response['Error']
+        logging.info(e.response[&#39;Error&#39;])
+        return e.response[&#39;Error&#39;]
 
 def create_group(UserGroupId=None, UserIds=None):
-    &quot;&quot;&quot;Creates a new group.
+    &#34;&#34;&#34;Creates a new group.
     A default user is required (mandatory) and should be specified in the UserIds list
 
     Return: Group ARN
     :param UserIds: List with user IDs to be associated with the new group. A default user is required
     :param UserGroupId: The ID (name) for the group
     :return: Group ARN
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     try:
         response = client.create_user_group(
             UserGroupId=UserGroupId,
-            Engine='Redis',
+            Engine=&#39;Redis&#39;,
             UserIds=UserIds
         )
-        return response['ARN']
+        return response[&#39;ARN&#39;]
     except Exception as e:
-        logging.info(e.response['Error'])
+        logging.info(e.response[&#39;Error&#39;])
 
 
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
     
-    groupName='mygroup2'
-    userName = 'myuser2'
-    userId=groupName+'-'+userName
+    groupName=&#39;mygroup2&#39;
+    userName = &#39;myuser2&#39;
+    userId=groupName+&#39;-&#39;+userName
 
     # Creates a new user if the user ID does not exist.
-    for tmpUserId,tmpUserName in [ (userId,userName), (groupName+'-default','default')]:
+    for tmpUserId,tmpUserName in [ (userId,userName), (groupName+&#39;-default&#39;,&#39;default&#39;)]:
         if not check_user_exists(tmpUserId):
-            response=create_user(UserId=tmpUserId, UserName=tmpUserName,Password='MyStrongPasswordWithNumbers',AccessString='on ~* +@all')
+            response=create_user(UserId=tmpUserId, UserName=tmpUserName,Password=&#39;MyStrongPasswordWithNumbers&#39;,AccessString=&#39;on ~* +@all&#39;)
             logging.info(response)
         # assigns the new user ID to the user group
     if not check_group_exists(groupName):
-        UserIds = [ userId , groupName+'-default']
+        UserIds = [ userId , groupName+&#39;-default&#39;]
         response=create_group(UserGroupId=groupName,UserIds=UserIds)
         logging.info(response)
-
 </code></pre><ol start="3">
 <li>Để chạy chương trình, hãy nhập lệnh sau:</li>
 </ol>
-<pre><code>python UserAndUserGroups.py
-
+<pre tabindex="0"><code>python UserAndUserGroups.py
 </code></pre><p>Trường hợp không chạy được chương trình, ta sử dụng lệnh sau:</p>
-<pre><code>python &quot;đường dẫn file UserAndUserGroups.py&quot;
-
+<pre tabindex="0"><code>python &#34;đường dẫn file UserAndUserGroups.py&#34;
 </code></pre>
 
 
@@ -2059,19 +2056,19 @@ if __name__ == '__main__':
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650525731"></script>
-    <script src="/js/jquery.sticky.js?1650525731"></script>
-    <script src="/js/featherlight.min.js?1650525731"></script>
-    <script src="/js/highlight.pack.js?1650525731"></script>
+    <script src="/js/clipboard.min.js?1674290879"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674290879"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674290879"></script>
+    <script src="/js/jquery.sticky.js?1674290879"></script>
+    <script src="/js/featherlight.min.js?1674290879"></script>
+    <script src="/js/highlight.pack.js?1674290879"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650525731"></script>
-    <script src="/js/learn.js?1650525731"></script>
-    <script src="/js/hugo-learn.js?1650525731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674290879"></script>
+    <script src="/js/learn.js?1674290879"></script>
+    <script src="/js/hugo-learn.js?1674290879"></script>
 
-    <link href="/mermaid/mermaid.css?1650525731" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650525731"></script>
+    <link href="/mermaid/mermaid.css?1674290879" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674290879"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

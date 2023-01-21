@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Write and read from a stream :: Amazon ElastiCache for Redis</title>
 
     
-    <link href="/css/nucleus.css?1650525731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650525731" rel="stylesheet">
-    <link href="/css/hybrid.css?1650525731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650525731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650525731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650525731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650525731" rel="stylesheet">
-    <link href="/css/theme.css?1650525731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650525731" rel="stylesheet">
+    <link href="/css/nucleus.css?1674290878" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674290878" rel="stylesheet">
+    <link href="/css/hybrid.css?1674290878" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674290878" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674290878" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674290878" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674290878" rel="stylesheet">
+    <link href="/css/theme.css?1674290878" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674290878" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1650525731" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674290878" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650525731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674290878"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650525731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650525731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674290878"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674290878"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650525731"></script>
+<script type="text/javascript" src="/js/search.js?1674290878"></script>
 
     
   </div>
@@ -1072,7 +1072,7 @@
   
     
     <li data-nav-id="/4-sdkelasticache/4.6-write-and-read-from-a-stream/" title="Write and read from a stream" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -1211,7 +1211,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-04-2022</font></i>
+        <i><font color=orange>21-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1305,7 +1305,7 @@
 <li>Create a python file named ReadWriteStream.py</li>
 <li>Copy the following program and paste it into a file named ReadWriteStream.py .</li>
 </ol>
-<pre><code>from redis import Redis
+<pre tabindex="0"><code>from redis import Redis
 import redis.exceptions as exceptions
 import logging
 import time
@@ -1314,24 +1314,24 @@ import threading
 logging.basicConfig(level=logging.INFO)
 
 def writeMessage(streamName):
-    &quot;&quot;&quot;Starts a loop writing the current time and thread name to 'streamName'
+    &#34;&#34;&#34;Starts a loop writing the current time and thread name to &#39;streamName&#39;
 
     :param streamName: Stream (key) name to write messages.
-    &quot;&quot;&quot;
-    fieldsDict={'writerId':threading.currentThread().getName(),'myvalue':None}
+    &#34;&#34;&#34;
+    fieldsDict={&#39;writerId&#39;:threading.currentThread().getName(),&#39;myvalue&#39;:None}
     while True:
-        fieldsDict['myvalue'] = time.ctime(time.time())
+        fieldsDict[&#39;myvalue&#39;] = time.ctime(time.time())
         redis.xadd(streamName,fieldsDict)
         time.sleep(1)
 
 def readMessage(groupName=None,streamName=None):
-    &quot;&quot;&quot;Starts a loop reading from 'streamName'
+    &#34;&#34;&#34;Starts a loop reading from &#39;streamName&#39;
     Multiple threads will read from the same stream consumer group. Consumer group is used to coordinate data distribution.
-    Once a thread acknowleges the message, it won't be provided again. If message wasn't acknowledged, it can be served to another thread.
+    Once a thread acknowleges the message, it won&#39;t be provided again. If message wasn&#39;t acknowledged, it can be served to another thread.
 
     :param groupName: stream group were multiple threads will read.
     :param streamName: Stream (key) name where messages will be read.
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
 
     readerID=threading.currentThread().getName()
     while True:
@@ -1339,13 +1339,13 @@ def readMessage(groupName=None,streamName=None):
             # Check if the stream has any message
             if redis.xlen(streamName)&gt;0:
                 # Check if if the messages are new (not acknowledged) or not (already processed)
-                streamData=redis.xreadgroup(groupName,readerID,{streamName:'&gt;'},count=1)
+                streamData=redis.xreadgroup(groupName,readerID,{streamName:&#39;&gt;&#39;},count=1)
                 if len(streamData) &gt; 0:
                     msgId,message = streamData[0][1][0]
-                    logging.info(&quot;{}: Got {} from ID {}&quot;.format(readerID,message,msgId))
+                    logging.info(&#34;{}: Got {} from ID {}&#34;.format(readerID,message,msgId))
                     #Do some processing here. If the message has been processed sucessfuly, acknowledge it and (optional) delete the message.
                     redis.xack(streamName,groupName,msgId)
-                    logging.info(&quot;Stream message ID {} ​​read and successfuly by {}&quot;.format(msgId,readerID))
+                    logging.info(&#34;Stream message ID {} ​​read and successfuly by {}&#34;.format(msgId,readerID))
                     redis.xdel(streamName,msgId)
             else:
                 pass
@@ -1354,36 +1354,33 @@ def readMessage(groupName=None,streamName=None):
             
         time.sleep(0.5)
 
-# Creates the stream 'mystream' and consumer group 'myworkergroup' where multiple threads will write/read.
+# Creates the stream &#39;mystream&#39; and consumer group &#39;myworkergroup&#39; where multiple threads will write/read.
 try:
-    redis.xgroup_create('mystream','myworkergroup',mkstream=True)
+    redis.xgroup_create(&#39;mystream&#39;,&#39;myworkergroup&#39;,mkstream=True)
 except exceptions.ResponseError as e:
-    logging.info(&quot;Consumer group already exists. Will continue despite the error: {}&quot;.format(e))
+    logging.info(&#34;Consumer group already exists. Will continue despite the error: {}&#34;.format(e))
 except:
     raise
 
 # Starts 5 writer threads.
 for writer_no in range(5):
-    writerThread = threading.Thread(target=writeMessage, name='writer-'+str(writer_no), args=('mystream',),daemon=True)
+    writerThread = threading.Thread(target=writeMessage, name=&#39;writer-&#39;+str(writer_no), args=(&#39;mystream&#39;,),daemon=True)
     writerThread.start()
 
 # Starts 10 reader threads
 for reader_no in range(10):
-    readerThread = threading.Thread(target=readMessage, name='reader-'+str(reader_no), args=('myworkergroup','mystream',),daemon=True)
+    readerThread = threading.Thread(target=readMessage, name=&#39;reader-&#39;+str(reader_no), args=(&#39;myworkergroup&#39;,&#39;mystream&#39;,),daemon=True)
     readerThread.daemon = True
     readerThread.start()
 
 # Keep the code running for 30 seconds
 time.sleep(30)
-
 </code></pre><ol start="3">
 <li>To run the program, enter the following command:</li>
 </ol>
-<pre><code>python ReadWriteStream.py
-
+<pre tabindex="0"><code>python ReadWriteStream.py
 </code></pre><p>If the program cannot run, use the following command:</p>
-<pre><code>python &quot;ReadWriteStream.py file path&quot;
-
+<pre tabindex="0"><code>python &#34;ReadWriteStream.py file path&#34;
 </code></pre>
 
 
@@ -2014,19 +2011,19 @@ time.sleep(30)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650525731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650525731"></script>
-    <script src="/js/jquery.sticky.js?1650525731"></script>
-    <script src="/js/featherlight.min.js?1650525731"></script>
-    <script src="/js/highlight.pack.js?1650525731"></script>
+    <script src="/js/clipboard.min.js?1674290878"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674290878"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674290878"></script>
+    <script src="/js/jquery.sticky.js?1674290878"></script>
+    <script src="/js/featherlight.min.js?1674290878"></script>
+    <script src="/js/highlight.pack.js?1674290878"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650525731"></script>
-    <script src="/js/learn.js?1650525731"></script>
-    <script src="/js/hugo-learn.js?1650525731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674290878"></script>
+    <script src="/js/learn.js?1674290878"></script>
+    <script src="/js/hugo-learn.js?1674290878"></script>
 
-    <link href="/mermaid/mermaid.css?1650525731" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650525731"></script>
+    <link href="/mermaid/mermaid.css?1674290878" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674290878"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

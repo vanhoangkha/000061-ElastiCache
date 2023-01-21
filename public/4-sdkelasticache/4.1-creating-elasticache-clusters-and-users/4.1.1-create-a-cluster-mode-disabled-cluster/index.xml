@@ -4,10 +4,6 @@
     <title>Create a cluster (mode disabled cluster) on Amazon ElastiCache for Redis</title>
     <link>/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/</link>
     <description>Recent content in Create a cluster (mode disabled cluster) on Amazon ElastiCache for Redis</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
