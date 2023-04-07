@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo AWS Access Key on Amazon ElastiCache for Redis</title>
+    <title>Tạo AWS Access Key on Amazon ElastiCache - Redis</title>
     <link>/vi/2-prerequiste/2.1-create-accesskey/</link>
-    <description>Recent content in Tạo AWS Access Key on Amazon ElastiCache for Redis</description>
+    <description>Recent content in Tạo AWS Access Key on Amazon ElastiCache - Redis</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/2-prerequiste/2.1-create-accesskey/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

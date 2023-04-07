@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Test user group on Amazon ElastiCache for Redis</title>
+    <title>Test user group on  Amazon ElastiCache - Redis</title>
     <link>/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/</link>
-    <description>Recent content in Test user group on Amazon ElastiCache for Redis</description>
+    <description>Recent content in Test user group on  Amazon ElastiCache - Redis</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

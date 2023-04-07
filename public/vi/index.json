@@ -4,7 +4,7 @@
 	"title": "Amazon ElastiCache - Redis",
 	"tags": [],
 	"description": "",
-	"content": "Tổng quan Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon ElastiCache - Redis.\nNội dung  Giới thiệu Các bước chuẩn bị Tạo ElastiCache cluster Sử dụng AWS SDK để ghi và đọc tới ElastiCache Dọn dẹp tài nguyên  "
+	"content": "Amazon ElastiCache - Redis Tổng quan Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon ElastiCache - Redis.\nNội dung  Giới thiệu Các bước chuẩn bị Tạo ElastiCache cluster Sử dụng AWS SDK để ghi và đọc tới ElastiCache Dọn dẹp tài nguyên  "
 },
 {
 	"uri": "/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/",

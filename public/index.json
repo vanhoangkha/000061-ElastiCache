@@ -4,7 +4,7 @@
 	"title": "Amazon ElastiCache - Redis",
 	"tags": [],
 	"description": "",
-	"content": "Overview In this lab, you\u0026rsquo;ll learn the basics and practice hands-on lab of Amazon ElastiCache - Redis service.\nContent  Introduction Preparation Create ElastiCache cluster Use AWS SDK to write and read to ElastiCache Cleanup resources  "
+	"content": "Amazon ElastiCache - Redis Overview In this lab, you\u0026rsquo;ll learn the basics and practice hands-on lab of Amazon ElastiCache - Redis service.\nContent  Introduction Preparation Create ElastiCache cluster Use AWS SDK to write and read to ElastiCache Cleanup resources  "
 },
 {
 	"uri": "/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/",

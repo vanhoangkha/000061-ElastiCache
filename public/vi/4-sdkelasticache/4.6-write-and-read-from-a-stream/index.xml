@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Write and read from a stream on Amazon ElastiCache for Redis</title>
+    <title>Write and read from a stream on Amazon ElastiCache - Redis</title>
     <link>/vi/4-sdkelasticache/4.6-write-and-read-from-a-stream/</link>
-    <description>Recent content in Write and read from a stream on Amazon ElastiCache for Redis</description>
+    <description>Recent content in Write and read from a stream on Amazon ElastiCache - Redis</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-sdkelasticache/4.6-write-and-read-from-a-stream/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
