@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình AWS CLI :: Amazon ElastiCache - Redis</title>
+    <title>Cluster Mode Enabled :: Amazon ElastiCache - Redis</title>
 
     
     <link href="/css/nucleus.css?1733805541" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-prerequiste/2.3-configure-aws-cli/">
+  <body class="" data-url="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -109,7 +109,7 @@
   
     
     <li data-nav-id="/vi/2-prerequiste/" title="Chuẩn bị" class="dd-item 
-        parent
+        
         
         
         ">
@@ -197,7 +197,7 @@
     
     <li data-nav-id="/vi/2-prerequiste/2.3-configure-aws-cli/" title="Cấu hình AWS CLI" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/vi/2-prerequiste/2.3-configure-aws-cli/">
@@ -231,7 +231,7 @@
   
     
     <li data-nav-id="/vi/3-amazonelasticacheforredis/" title="Tạo ElastiCache cluster" class="dd-item 
-        
+        parent
         
         
         ">
@@ -510,7 +510,7 @@
   
     
     <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/" title="Kết nối với node của cluster" class="dd-item 
-        
+        parent
         
         
         ">
@@ -570,7 +570,7 @@
     
     <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/" title="Cluster Mode Enabled" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">
@@ -1163,7 +1163,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.3-configure-aws-cli/">English</option>
+                      <option id="en" value="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">English</option>
                     
                   
               
@@ -1177,7 +1177,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prerequiste/2.3-configure-aws-cli/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1268,7 +1268,13 @@
             
           
           
-            <a href='/vi/'>Amazon ElastiCache - Redis</a> > <a href='/vi/2-prerequiste/'>Chuẩn bị</a> > Cấu hình AWS CLI
+            
+            
+          
+          
+            <a href='/vi/'>Amazon ElastiCache - Redis</a> > <a href='/vi/3-amazonelasticacheforredis/'>Tạo ElastiCache cluster</a> > <a href='/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/'>Kết nối với node của cluster</a> > Cluster Mode Enabled
+          
+        
           
         
           
@@ -1281,7 +1287,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tìm-node-endpoints-for-a-redis-cluster-mode-enabled-cluster">Tìm node endpoints for a Redis (cluster mode enabled) cluster</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1297,7 +1311,7 @@
           
             <h1>
               
-              Cấu hình AWS CLI
+              Cluster Mode Enabled
             </h1>
           
 
@@ -1305,26 +1319,38 @@
 
 
 
-	<p>Giao diện dòng lệnh AWS (AWS CLI) là một công cụ mã nguồn mở cho phép bạn tương tác với các dịch vụ AWS bằng cách sử dụng các lệnh trong trình bao dòng lệnh của bạn. Với cấu hình tối thiểu, AWS CLI cho phép bạn bắt đầu chạy các lệnh triển khai chức năng tương đương với chức năng được cung cấp bởi Bảng điều khiển quản lý AWS dựa trên trình duyệt từ dấu nhắc lệnh trong chương trình đầu cuối của bạn:</p>
-<p><strong>Linux shell</strong> - Sử dụng các chương trình shell phổ biến như bash, zsh, và tcsh để chạy các lệnh trong Linux hoặc macOS.</p>
-<p><strong>Windows command line</strong> - Trên Windows, chạy lệnh tại dấu nhắc lệnh Windows hoặc trong PowerShell.</p>
-<p><strong>Remotely</strong> - Chạy lệnh trên Amazon Elastic Compute Cloud (Amazon EC2) thông qua chương trình đầu cuối từ xa như PuTTY hoặc SSH hoặc với AWS Systems Manager.</p>
-<p>Các bước cấu hình Giao diện dòng lệnh AWS (AWS CLI):</p>
+	<p>Sử dụng <strong>Configuration Endpoint</strong> cho cả hoạt động đọc và ghi. Redis xác định node nào của cluster để truy cập.</p>
+<p>Quy trình sau đây trình bày cách tìm và sao chép <strong>Redis (cluster mode enabled) cluster endpoints</strong>.</p>
+<h3 id="tìm-node-endpoints-for-a-redis-cluster-mode-enabled-cluster">Tìm node endpoints for a Redis (cluster mode enabled) cluster</h3>
 <ol>
 <li>
-<p>Nhập dòng lệnh <strong><code>aws configure</code></strong> tại Windows Command Promt, sau đó nhấn Enter .</p>
+<p>Đăng nhập vào AWS Management Console và mở ElastiCache console tại <a href="https://console.aws.amazon.com/elasticache/">https://console.aws.amazon.com/elasticache/</a>.</p>
 </li>
 <li>
-<p>AWS CLI xuất ra các dòng văn bản, nhập các thông tin sau:</p>
+<p>Từ ngăn điều hướng, chọn <strong>Redis clusters</strong>. Danh sách các cluster đang chạy bất kỳ phiên bản Redis nào sẽ xuất hiện.</p>
+</li>
+<li>
+<p>Từ danh sách các cluster, hãy chọn tên cluster của một cluster. Trang shard mở ra.</p>
 </li>
 </ol>
-<pre tabindex="0"><code>AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-west-2
-Default output format [None]: ENTER
-</code></pre><p><em>Hình ảnh minh họa:</em>
-<img alt="ConfigureAWSCLI!" src="/images/2-Prerequiste/2.3-ConfigureAWSCLI/0001-configureawscli.png"></p>
-
+<p><img alt="Connect to the cluster&rsquo;s node" src="/images/3-GettingstartedwithAmazonElastiCacheforRedis/3.5-Connecttotheclusternode/3.5.2-Rediscustermodeenabledendpointsconsole/0001-connectenable.png"></p>
+<ol start="4">
+<li>Chọn tên của shard mà bạn muốn endpoint của node. Danh sách các node của shard xuất hiện với endpoint của mỗi node.</li>
+</ol>
+<p><img alt="Connect to the cluster&rsquo;s node" src="/images/3-GettingstartedwithAmazonElastiCacheforRedis/3.5-Connecttotheclusternode/3.5.2-Rediscustermodeenabledendpointsconsole/0002-connectenable.png"></p>
+<ol start="5">
+<li>Định vị Endpoint column và đọc endpoint cho mỗi node.</li>
+</ol>
+<p><img alt="Connect to the cluster&rsquo;s node" src="/images/3-GettingstartedwithAmazonElastiCacheforRedis/3.5-Connecttotheclusternode/3.5.2-Rediscustermodeenabledendpointsconsole/0003-connectenable.png"></p>
+<p><strong>In-transit encryption not enabled</strong></p>
+<pre tabindex="0"><code>clusterName.xxxxxx.regionAndAz.cache.amazonaws.com:port
+			
+rce.ameaqx.use1.cache.amazonaws.com:6379
+</code></pre><p><strong>In-transit encryption enabled</strong></p>
+<pre tabindex="0"><code>clustercfg.clusterName.xxxxxx.regionAndAz.cache.amazonaws.com:port
+			
+clustercfg.rce.ameaqx.use1.cache.amazonaws.com:6379
+</code></pre>
 
 
 
@@ -1383,95 +1409,6 @@ Default output format [None]: ENTER
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1514,6 +1451,22 @@ Default output format [None]: ENTER
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1521,6 +1474,25 @@ Default output format [None]: ENTER
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1577,38 +1549,6 @@ Default output format [None]: ENTER
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1646,10 +1586,100 @@ Default output format [None]: ENTER
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1941,10 +1971,10 @@ Default output format [None]: ENTER
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-prerequiste/2.2-install-aws-cli/" title="Cài đặt AWS CLI"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/" title="Cluster Mode Disabled"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-amazonelasticacheforredis/" title="Tạo ElastiCache cluster" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/" title="Endpoints use AWS CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

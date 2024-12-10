@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình AWS CLI :: Amazon ElastiCache - Redis</title>
+    <title>Cluster Mode Enabled ::  Amazon ElastiCache - Redis</title>
 
     
     <link href="/css/nucleus.css?1733805541" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-prerequiste/2.3-configure-aws-cli/">
+  <body class="" data-url="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -61,7 +61,7 @@
 <script type="text/javascript" src="/js/auto-complete.js?1733805541"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/";
     
 </script>
 <script type="text/javascript" src="/js/search.js?1733805541"></script>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+      <a href="/1-introduce/">
+           <b> 1. </b> Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/" title="Chuẩn bị" class="dd-item 
-        parent
+    <li data-nav-id="/2-prerequiste/" title="Preparation" class="dd-item 
+        
         
         
         ">
-      <a href="/vi/2-prerequiste/">
-           <b> 2. </b> Chuẩn bị
+      <a href="/2-prerequiste/">
+           <b> 2. </b> Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-create-accesskey/" title="Tạo AWS Access Key" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-create-accesskey/" title="Generate AWS Access Key" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-create-accesskey/">
-           <b> 2.1 </b> Tạo AWS Access Key
+      <a href="/2-prerequiste/2.1-create-accesskey/">
+           <b> 2.1 </b> Generate AWS Access Key
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-install-aws-cli/" title="Cài đặt AWS CLI" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.2-install-aws-cli/" title="Install AWS CLI" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-install-aws-cli/">
-           <b> 2.2 </b> Cài đặt AWS CLI
+      <a href="/2-prerequiste/2.2-install-aws-cli/">
+           <b> 2.2 </b> Install AWS CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-configure-aws-cli/" title="Cấu hình AWS CLI" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-configure-aws-cli/" title="Configure AWS CLI" class="dd-item 
         
-        active
+        
         
         ">
-      <a href="/vi/2-prerequiste/2.3-configure-aws-cli/">
-           <b> 2.3 </b> Cấu hình AWS CLI
+      <a href="/2-prerequiste/2.3-configure-aws-cli/">
+           <b> 2.3 </b> Configure AWS CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -230,13 +230,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/" title="Tạo ElastiCache cluster" class="dd-item 
-        
+    <li data-nav-id="/3-amazonelasticacheforredis/" title="Create ElastiCache cluster" class="dd-item 
+        parent
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/">
-           <b> 3. </b> Tạo ElastiCache cluster
+      <a href="/3-amazonelasticacheforredis/">
+           <b> 3. </b> Create ElastiCache cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -261,13 +261,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.1-create-a-subnet-group/" title="Tạo subnet group" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/" title="Create subnet group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.1-create-a-subnet-group/">
-           <b> 3.1 </b> Tạo subnet group
+      <a href="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/">
+           <b> 3.1 </b> Create subnet group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -292,13 +292,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.1-useconsole/" title="Sử dụng Console" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.1-useconsole/" title="Use Console" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.1-useconsole/">
-           <b> 3.1.1 </b> Sử dụng Console
+      <a href="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.1-useconsole/">
+           <b> 3.1.1 </b> Use Console
           
             <i class="fas fa-check read-icon"></i>
           
@@ -320,12 +320,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/" title="Use AWS CLI" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/" title="Use AWS CLI" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/">
+      <a href="/3-amazonelasticacheforredis/3.1-create-a-subnet-group/3.1.2-useawscli/">
            <b> 3.1.2 </b> Use AWS CLI
           
             <i class="fas fa-check read-icon"></i>
@@ -357,13 +357,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/" title="Tạo cluster (cluster mode disabled)" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/" title="Create cluster (cluster mode disabled)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/">
-           <b> 3.2 </b> Tạo cluster (cluster mode disabled)
+      <a href="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/">
+           <b> 3.2 </b> Create cluster (cluster mode disabled)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -388,13 +388,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.1-use-console/" title="Sử dụng Console" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.1-use-console/" title="Use Console" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.1-use-console/">
-           <b> 3.2.1</b> Sử dụng Console
+      <a href="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.1-use-console/">
+           <b> 3.2.1</b> Use Console
           
             <i class="fas fa-check read-icon"></i>
           
@@ -416,12 +416,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.2-use-aws-cli/" title="Use AWS CLI" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.2-use-aws-cli/" title="Use AWS CLI" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.2-use-aws-cli/">
+      <a href="/3-amazonelasticacheforredis/3.2-create-a-clustercluster-mode-disabled/3.2.2-use-aws-cli/">
            <b> 3.2.2 </b> Use AWS CLI
           
             <i class="fas fa-check read-icon"></i>
@@ -453,13 +453,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.3-create-a-clustercluster-mode-enabled/" title="Tạo cluster(cluster mode enabled)" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.3-create-a-clustercluster-mode-enabled/" title="Create cluster(cluster mode enabled)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.3-create-a-clustercluster-mode-enabled/">
-           <b> 3.3</b> Tạo cluster(cluster mode enabled)
+      <a href="/3-amazonelasticacheforredis/3.3-create-a-clustercluster-mode-enabled/">
+           <b> 3.3</b> Create cluster(cluster mode enabled)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -481,13 +481,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.4-grantaccesstocluster/" title="Cấp quyền truy cập vào cluster" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.4-grantaccesstocluster/" title="Grant access to the cluster" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.4-grantaccesstocluster/">
-           <b> 3.4 </b> Cấp quyền truy cập vào cluster
+      <a href="/3-amazonelasticacheforredis/3.4-grantaccesstocluster/">
+           <b> 3.4 </b> Grant access to the cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -509,13 +509,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/" title="Kết nối với node của cluster" class="dd-item 
-        
+    <li data-nav-id="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/" title="Connect to cluster node" class="dd-item 
+        parent
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/">
-           <b> 3.5. </b> Kết nối với node của cluster
+      <a href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/">
+           <b> 3.5. </b> Connect to cluster node
           
             <i class="fas fa-check read-icon"></i>
           
@@ -540,12 +540,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/" title="Cluster Mode Disabled" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/" title="Cluster Mode Disabled" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/">
+      <a href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/">
            <b> 3.5.1 </b> Cluster Mode Disabled
           
             <i class="fas fa-check read-icon"></i>
@@ -568,12 +568,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/" title="Cluster Mode Enabled" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/" title="Cluster Mode Enabled" class="dd-item 
         
-        
+        active
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">
+      <a href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">
            <b> 3.5.2 </b> Cluster Mode Enabled
           
             <i class="fas fa-check read-icon"></i>
@@ -596,13 +596,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/" title="Endpoints use AWS CLI" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/" title="Endpoints using AWS CLI" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/">
-           <b> 3.5.3 </b> Endpoints use AWS CLI
+      <a href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/">
+           <b> 3.5.3 </b> Endpoints using AWS CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -633,13 +633,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.6-deleting-a-cluster/" title="Xóa cluster" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/" title="" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.6-deleting-a-cluster/">
-           <b> 3.6 </b> Xóa cluster
+      <a href="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/">
+          
           
             <i class="fas fa-check read-icon"></i>
           
@@ -664,13 +664,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.1-use-console/" title="Use Console" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.1-use-console/" title="" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.1-use-console/">
-           <b> 3.6.1 </b> Use Console
+      <a href="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.1-use-console/">
+          
           
             <i class="fas fa-check read-icon"></i>
           
@@ -692,13 +692,13 @@
  
   
     
-    <li data-nav-id="/vi/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.2-use-aws-cli/" title="Use AWS CLI" class="dd-item 
+    <li data-nav-id="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.2-use-aws-cli/" title="" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.2-use-aws-cli/">
-           <b> 3.6.2 </b> Use AWS CLI
+      <a href="/3-amazonelasticacheforredis/3.6-deleting-a-cluster/3.6.2-use-aws-cli/">
+          
           
             <i class="fas fa-check read-icon"></i>
           
@@ -736,13 +736,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/" title="Sử dụng AWS SDK để ghi và đọc dữ liệu trên ElastiCache" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/" title="Using AWS SDK to write and read data on ElastiCache" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/">
-           <b> 4. </b> Sử dụng AWS SDK để ghi và đọc dữ liệu trên ElastiCache
+      <a href="/4-sdkelasticache/">
+           <b> 4. </b> Using AWS SDK to write and read data on ElastiCache
           
             <i class="fas fa-check read-icon"></i>
           
@@ -767,13 +767,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/" title="Tạo Elasticache cluster" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/" title="Create Elasticache cluster" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/">
-           <b> 4.1 </b> Tạo Elasticache cluster
+      <a href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/">
+           <b> 4.1 </b> Create Elasticache cluster
           
             <i class="fas fa-check read-icon"></i>
           
@@ -798,13 +798,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/" title="Tạo một cluster (mode disabled cluster)" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/" title="Create a cluster (mode disabled cluster)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/">
-           <b> 4.1.1 </b> Tạo một cluster (mode disabled cluster)
+      <a href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.1-create-a-cluster-mode-disabled-cluster/">
+           <b> 4.1.1 </b> Create a cluster (mode disabled cluster)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -826,13 +826,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.2-create-a-cluster-mode-enabled-cluster/" title="Tạo một cluster (mode enabled cluster)" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.2-create-a-cluster-mode-enabled-cluster/" title="Create a cluster (mode enabled cluster)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.2-create-a-cluster-mode-enabled-cluster/">
-           <b> 4.1.2 </b> Tạo một cluster (mode enabled cluster)
+      <a href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.2-create-a-cluster-mode-enabled-cluster/">
+           <b> 4.1.2 </b> Create a cluster (mode enabled cluster)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -854,13 +854,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/" title="Kiểm tra nhóm người dùng" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/" title="Test user group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/">
-           <b> 4.1.3 </b> Kiểm tra nhóm người dùng
+      <a href="/4-sdkelasticache/4.1-creating-elasticache-clusters-and-users/4.1.3-check-if-users/">
+           <b> 4.1.3 </b> Test user group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -891,13 +891,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.2-connecting-to-elasticache/" title="Kết nối với Elasticache" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.2-connecting-to-elasticache/" title="Connecting to Elasticache" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.2-connecting-to-elasticache/">
-           <b> 4.2 </b> Kết nối với Elasticache
+      <a href="/4-sdkelasticache/4.2-connecting-to-elasticache/">
+           <b> 4.2 </b> Connecting to Elasticache
           
             <i class="fas fa-check read-icon"></i>
           
@@ -922,13 +922,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.1-connecting-to-a-cluster-mode-disabled-cluster/" title="Kết nối tới một cluster (mode disabled cluster)" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.1-connecting-to-a-cluster-mode-disabled-cluster/" title="Connecting to a cluster (mode disabled cluster)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.1-connecting-to-a-cluster-mode-disabled-cluster/">
-           <b> 4.2.1 </b> Kết nối tới một cluster (mode disabled cluster)
+      <a href="/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.1-connecting-to-a-cluster-mode-disabled-cluster/">
+           <b> 4.2.1 </b> Connecting to a cluster (mode disabled cluster)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -950,13 +950,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.2-connecting-to-a-cluster-mode-enabled-cluster/" title="Kết nối tới một cluster (mode enabled cluster)" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.2-connecting-to-a-cluster-mode-enabled-cluster/" title="Connecting to a cluster (mode enabled cluster)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.2-connecting-to-a-cluster-mode-enabled-cluster/">
-           <b> 4.2.2 </b> Kết nối tới một cluster (mode enabled cluster)
+      <a href="/4-sdkelasticache/4.2-connecting-to-elasticache/4.2.2-connecting-to-a-cluster-mode-enabled-cluster/">
+           <b> 4.2.2 </b> Connecting to a cluster (mode enabled cluster)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -987,12 +987,12 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.3-set-and-get-strings/" title="Set and Get strings" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.3-set-and-get-strings/" title="Set and Get strings" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.3-set-and-get-strings/">
+      <a href="/4-sdkelasticache/4.3-set-and-get-strings/">
            <b> 4.3 </b> Set and Get strings
           
             <i class="fas fa-check read-icon"></i>
@@ -1015,12 +1015,12 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/" title="Set and Get a hash with multiple items" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/" title="Set and Get a hash with multiple items" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/">
+      <a href="/4-sdkelasticache/4.4-set-and-get-a-hash-with-multiple-items/">
            <b> 4.4 </b> Set and Get a hash with multiple items
           
             <i class="fas fa-check read-icon"></i>
@@ -1043,12 +1043,12 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.5-publish-and-subscriber/" title="Publish (write) and subscribe (read)" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.5-publish-and-subscriber/" title="Publish (write) and subscribe (read)" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.5-publish-and-subscriber/">
+      <a href="/4-sdkelasticache/4.5-publish-and-subscriber/">
            <b> 4.5 </b> Publish (write) and subscribe (read)
           
             <i class="fas fa-check read-icon"></i>
@@ -1071,13 +1071,13 @@
  
   
     
-    <li data-nav-id="/vi/4-sdkelasticache/4.6-write-and-read-from-a-stream/" title="Write and read from a stream" class="dd-item 
+    <li data-nav-id="/4-sdkelasticache/4.6-write-and-read-from-a-stream/" title="Write and read from a stream" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-sdkelasticache/4.6-write-and-read-from-a-stream/">
-           <b> 4.6 </b> Write and read from a stream
+      <a href="/4-sdkelasticache/4.6-write-and-read-from-a-stream/">
+           <b>4.6 </b> Write and read from a stream
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1106,13 +1106,13 @@
  
   
     
-    <li data-nav-id="/vi/5.cleanupresource/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/5.cleanupresource/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5.cleanupresource/">
-           <b> 5. </b> Dọn dẹp tài nguyên
+      <a href="/5.cleanupresource/">
+           <b> 5. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1134,11 +1134,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -1163,7 +1163,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.3-configure-aws-cli/">English</option>
+                      <option id="en" value="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/" selected>English</option>
                     
                   
               
@@ -1177,7 +1177,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prerequiste/2.3-configure-aws-cli/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.2--redis-cluster-mode-enabled-cluster-console/">Tiếng Việt</option>
                     
                   
               
@@ -1268,7 +1268,13 @@
             
           
           
-            <a href='/vi/'>Amazon ElastiCache - Redis</a> > <a href='/vi/2-prerequiste/'>Chuẩn bị</a> > Cấu hình AWS CLI
+            
+            
+          
+          
+            <a href='/'>Amazon ElastiCache - Redis</a> > <a href='/3-amazonelasticacheforredis/'>Create ElastiCache cluster</a> > <a href='/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/'>Connect to cluster node</a> > Cluster Mode Enabled
+          
+        
           
         
           
@@ -1281,7 +1287,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#find-node-endpoints-for-a-redis-cluster-mode-enabled-cluster">Find node endpoints for a Redis (cluster mode enabled) cluster</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1297,7 +1311,7 @@
           
             <h1>
               
-              Cấu hình AWS CLI
+              Cluster Mode Enabled
             </h1>
           
 
@@ -1305,26 +1319,38 @@
 
 
 
-	<p>Giao diện dòng lệnh AWS (AWS CLI) là một công cụ mã nguồn mở cho phép bạn tương tác với các dịch vụ AWS bằng cách sử dụng các lệnh trong trình bao dòng lệnh của bạn. Với cấu hình tối thiểu, AWS CLI cho phép bạn bắt đầu chạy các lệnh triển khai chức năng tương đương với chức năng được cung cấp bởi Bảng điều khiển quản lý AWS dựa trên trình duyệt từ dấu nhắc lệnh trong chương trình đầu cuối của bạn:</p>
-<p><strong>Linux shell</strong> - Sử dụng các chương trình shell phổ biến như bash, zsh, và tcsh để chạy các lệnh trong Linux hoặc macOS.</p>
-<p><strong>Windows command line</strong> - Trên Windows, chạy lệnh tại dấu nhắc lệnh Windows hoặc trong PowerShell.</p>
-<p><strong>Remotely</strong> - Chạy lệnh trên Amazon Elastic Compute Cloud (Amazon EC2) thông qua chương trình đầu cuối từ xa như PuTTY hoặc SSH hoặc với AWS Systems Manager.</p>
-<p>Các bước cấu hình Giao diện dòng lệnh AWS (AWS CLI):</p>
+	<p>Use <strong>Configuration Endpoint</strong> for both read and write operations. Redis determines which node of the cluster to access.</p>
+<p>The following procedure demonstrates how to find and clone <strong>Redis (cluster mode enabled) cluster endpoints</strong>.</p>
+<h3 id="find-node-endpoints-for-a-redis-cluster-mode-enabled-cluster">Find node endpoints for a Redis (cluster mode enabled) cluster</h3>
 <ol>
 <li>
-<p>Nhập dòng lệnh <strong><code>aws configure</code></strong> tại Windows Command Promt, sau đó nhấn Enter .</p>
+<p>Sign in to the AWS Management Console and open the ElastiCache console at <a href="https://console.aws.amazon.com/elasticache/">https://console.aws.amazon.com/elasticache/</a>.</p>
 </li>
 <li>
-<p>AWS CLI xuất ra các dòng văn bản, nhập các thông tin sau:</p>
+<p>From the navigation pane, select <strong>Redis clusters</strong>. A list of clusters running any version of Redis will appear.</p>
+</li>
+<li>
+<p>From the list of clusters, select the cluster name of a cluster. The shard page opens.</p>
 </li>
 </ol>
-<pre tabindex="0"><code>AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-west-2
-Default output format [None]: ENTER
-</code></pre><p><em>Hình ảnh minh họa:</em>
-<img alt="ConfigureAWSCLI!" src="/images/2-Prerequiste/2.3-ConfigureAWSCLI/0001-configureawscli.png"></p>
+<p><img alt="Connect to the cluster&rsquo;s node" src="/images/3-GettingstartedwithAmazonElastiCacheforRedis/3.5-Connecttotheclusternode/3.5.2-Rediscustermodeenabledendpointsconsole/0001-connectenable.png"></p>
+<ol start="4">
+<li>Select the name of the shard you want the node&rsquo;s endpoint to. The list of shard nodes appears with each node&rsquo;s endpoint.</li>
+</ol>
+<p><img alt="Connect to the cluster&rsquo;s node" src="/images/3-GettingstartedwithAmazonElastiCacheforRedis/3.5-Connecttotheclusternode/3.5.2-Rediscustermodeenabledendpointsconsole/0002-connectenable.png"></p>
+<ol start="5">
+<li>Locate the Endpoint column and read the endpoint for each node.</li>
+</ol>
+<p><img alt="Connect to the cluster&rsquo;s node" src="/images/3-GettingstartedwithAmazonElastiCacheforRedis/3.5-Connecttotheclusternode/3.5.2-Rediscustermodeenabledendpointsconsole/0003-connectenable.png"></p>
+<p><strong>In-transit encryption not enabled</strong></p>
+<pre tabindex="0"><code>clusterName.xxxxxx.regionAndAz.cache.amazonaws.com:port
 
+rce.ameaqx.use1.cache.amazonaws.com:6379
+</code></pre><p><strong>In-transit encryption enabled</strong></p>
+<pre tabindex="0"><code>clustercfg.clusterName.xxxxxx.regionAndAz.cache.amazonaws.com:port
+
+clustercfg.rce.ameaqx.use1.cache.amazonaws.com:6379
+</code></pre>
 
 
 
@@ -1383,95 +1409,6 @@ Default output format [None]: ENTER
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1514,6 +1451,22 @@ Default output format [None]: ENTER
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1521,6 +1474,25 @@ Default output format [None]: ENTER
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1577,38 +1549,6 @@ Default output format [None]: ENTER
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1646,10 +1586,100 @@ Default output format [None]: ENTER
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1941,10 +1971,10 @@ Default output format [None]: ENTER
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-prerequiste/2.2-install-aws-cli/" title="Cài đặt AWS CLI"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.1-redis-cluster-mode-disabled-cluster_s-endpoints-console/" title="Cluster Mode Disabled"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-amazonelasticacheforredis/" title="Tạo ElastiCache cluster" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/3-amazonelasticacheforredis/3.5-connect-to-the-cluster_s-node/3.5.3-finding-endpoints-aws-cli/" title="Endpoints using AWS CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
