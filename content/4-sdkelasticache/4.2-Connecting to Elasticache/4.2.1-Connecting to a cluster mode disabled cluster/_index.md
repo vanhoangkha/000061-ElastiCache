@@ -1,6 +1,6 @@
 ---
 title : "Connecting to a cluster (mode disabled cluster)"
-date : "`r Sys.Date()`"
+date: 2024-01-01
 weight : 1
 chapter : false
 pre : " <b> 4.2.1 </b> "
