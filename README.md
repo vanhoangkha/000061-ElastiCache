@@ -1,4 +1,4 @@
-# ⚡ ElastiCache
+# ElastiCache
 
 In-memory caching with Amazon ElastiCache.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000061-ElastiCache/)**
+**[Start the workshop](https://vanhoangkha.github.io/000061-ElastiCache/)**
 
 ## Prerequisites
 
